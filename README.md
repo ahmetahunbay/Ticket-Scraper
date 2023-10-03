@@ -1,21 +1,27 @@
-This is the base for a ticket price scraper using selenium and Python.
+<h3>Description</h3>
+This is the base for a ticket price scraper using Selenium and Python.
 
-In the future, this will be a script that automatically excutes on a cloud platform every x minutes,
+In the future, this will be a script that automatically executes on a cloud platform every x minutes,
  and writes data to a cloud db.
 
-What we want:
+ To run the code, run:
+ make setup
+ make install
+ make run
+
+<h3>Data Structures</h3>
 
 Game = struct{team1, team2, volume, date}
 
 Ticket = struct{userName, ticketPrice, rank}
 
-Data will be tracked by:
+data will be structured:
 KEY = time of scrape
 VALUE = list(tuple(Game, list(Ticket)))
 
-but note this script will only store one scrape
+This script only does one scrape
 
-Process:
+<h3>Pseudocode Process:</h3>
 
 currScrape = time.now
 gameList = []
@@ -29,4 +35,4 @@ for each upcomingGame in studentSeats:
     Add (game, tickets) tuple to gameList
 
 In the future: 
-add (currScrape, gameList) to a database
+add (currScrape, gameList) to a database somehow
