@@ -23,16 +23,16 @@ This script only does one scrape
 
 <h3>Pseudocode Process:</h3>
 
-currScrape = time.now
-gameList = []
-studentSeats = studentseats.com
+currScrape = time.now\
+gameList = []\
+studentSeats = studentseats.com\
 
-for each upcomingGame in studentSeats:
-    game = Game(upcomingGame data)
-    tickets = []
-    for each ticket in upcomingGame:
-        tickets.append(Ticket(ticket data))
-    Add (game, tickets) tuple to gameList
+for each upcomingGame in studentSeats:\
+    game = Game(upcomingGame data)\
+    tickets = []\
+    for each ticket in upcomingGame:\
+        tickets.append(Ticket(ticket data))\
+    Add (game, tickets) tuple to gameList\
 
 In the future: 
 add (currScrape, gameList) to a database somehow
