@@ -38,3 +38,5 @@ for each upcomingGame in studentSeats:
 ```
 In the future: 
 add (currScrape, gameList) to a database somehow
+
+For now, written to text file in scrapes

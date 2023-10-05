@@ -23,4 +23,7 @@ run:
 clean:
 	rm -rf $(VENV_NAME)
 
+clearScrapes:
+	rm -f scrapes/*
+
 

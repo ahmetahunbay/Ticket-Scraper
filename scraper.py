@@ -6,16 +6,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 
 
+
 # this represents an individual game.
 # store the two teams, first one will be home team
 # store date of game.
 # store the volume aka "{volume} students looking for tickets!"
 class Game:
-    def __init__(self, team1, team2, date, volume):
+    def __init__(self, team1, team2, date, volume, sport):
         self.team1 = team1
         self.team2 = team2
         self.date = date
         self.volume = volume
+        self.sport = sport
 
 # represents individual ticket listings. rank is the rank of the ticket in the list of tickets
 class Ticket:
@@ -58,9 +60,14 @@ def scrapeTickets():
         #volume = driver.find_elements(By.CLASS_NAME, 'card-element-interior-dark')
         volume = 0
 
-        #TODO: Get date of game from website
-        date = datetime.now()
-        game = Game(team1, team2, date, volume)
+        #Get date of game from website
+        gameDateStr = driver.find_elements(By.CLASS_NAME, 'upcomingGameSpan')[0].text
+        gameDateTime = datetime.strptime(gameDateStr, "%A, %B %d, %Y")
+
+        #get sport
+        sportText = driver.find_element(By.CLASS_NAME, 'upcomingGameSport').text
+
+        game = Game(team1, team2, gameDateTime, volume, sportText)
 
         users = driver.find_elements(By.CLASS_NAME, 'ticket-username')
         posts = []
@@ -75,7 +82,7 @@ def scrapeTickets():
 
             userName = tup[0].text
             ticketPrice = tup[1].text
-            rank = i
+            rank = i + 1
 
             tickets.append(Ticket(userName, ticketPrice, rank))
         gameList.append((game, tickets))
@@ -85,5 +92,19 @@ def scrapeTickets():
 
 if __name__ == '__main__':
     scrapeTime, gameList = scrapeTickets()
+
+    #write to file for visualization
+    filePath = "./scrapes/" + str(scrapeTime) + ".txt"
+    with open(filePath, 'w') as file:
+        for game, ticketList in gameList:
+            file.write("Game: " + game.team1 + " vs. " + game.team2 + "\n")
+            file.write("Sport: " + game.sport + "\n")
+            file.write("Date: " + str(game.date) + "\n")
+            file.write("Volume: " + str(game.volume) + "\n")
+            file.write("Listings:\n")
+            for ticket in ticketList:
+                file.write(" " + str(ticket.rank) + ". " + ticket.userName + " " + ticket.price + "\n")
+            file.write("\n\n")
+
 
 
