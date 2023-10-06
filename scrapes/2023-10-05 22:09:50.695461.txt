@@ -1,0 +1,124 @@
+Game: Ohio State vs. Maryland
+Sport: Football
+Date: 2023-10-06 00:00:00
+Volume: 0
+Listings:
+ 1. SnehalPatel $60.00
+ 2. Aggarwal.178 $70.00
+ 3. biondo.17 $84.00
+ 4. mayankbongani $100.00
+ 5. clirtzman $100.00
+ 6. Kam_wash $105.00
+ 7. burnhamjones $120.00
+
+
+Game: USC vs. Arizona
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Disruption $75.00
+
+
+Game: Iowa vs. Purdue
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. mpandurovic $60.00
+ 2. gfulsaas $65.00
+ 3. Mollyschneider $70.00
+ 4. Kraap $75.00
+ 5. echag611 $75.00
+ 6. nathanhawk $79.00
+ 7. carolynmayy $80.00
+ 8. kieralnelson $80.00
+ 9. Jdacey $80.00
+ 10. cmbasken $85.00
+
+
+Game: Wisconsin vs. Rutgers
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Mbalakrishnan $50.00
+ 2. ashleyng $51.00
+ 3. dshin $53.00
+ 4. nithinlw $54.00
+ 5. ngolden2 $55.00
+ 6. olafrenz $55.00
+ 7. Brynn24 $55.00
+ 8. ntangwall $55.00
+ 9. Marcushandojo $55.00
+ 10. ellapeterson $58.00
+ 11. RyanDicks $59.00
+ 12. 18laial $59.00
+ 13. jabuettner $60.00
+ 14. Caitlynmaus $60.00
+ 15. davidengelking $60.00
+ 16. andrewmoysis $60.00
+ 17. maxliss $60.00
+ 18. NoahVC $60.00
+ 19. snemr $60.00
+ 20. Michael5763 $60.00
+ 21. sahit1168 $60.00
+ 22. Jessicar.fox $60.00
+ 23. blancacollins $65.00
+ 24. aditya_shh $69.00
+ 25. Briannearendt $70.00
+ 26. cgotzion $70.00
+ 27. Ebags24 $70.00
+ 28. jlimberis $70.00
+ 29. samanthagruber $70.00
+ 30. Maddy.schultz $70.00
+
+
+Game: Michigan vs. Providence
+Sport: Hockey
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. jfarrow $20.00
+
+
+Game: Wisconsin vs. Augustana
+Sport: Hockey
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Skrosin $8.00
+ 2. ayanapatel1 $8.00
+ 3. aharder04 $8.00
+ 4. Daltinpapandrea $9.00
+ 5. chloesimonson $9.99
+ 6. abnercasanova $10.00
+ 7. mgamero $10.00
+ 8. ihoffman3 $10.00
+
+
+Game: Wisconsin vs. Augustana
+Sport: Hockey
+Date: 2023-10-08 00:00:00
+Volume: 0
+Listings:
+ 1. Ahellrung $7.00
+ 2. aharder04 $8.00
+ 3. hpool $10.00
+ 4. ihoffman3 $10.00
+ 5. Hal.Stein $15.00
+
+
+Game: Purdue vs. Ohio State
+Sport: Football
+Date: 2023-10-14 00:00:00
+Volume: 0
+Listings:
+ 1. Ridges03 $80.00
+ 2. Deven.Hawkins $80.00
+ 3. Anoriaelaine $100.00
+ 4. amiravanest $100.00
+ 5. Charleymani $100.00
+ 6. thomp897 $110.00
+
+
