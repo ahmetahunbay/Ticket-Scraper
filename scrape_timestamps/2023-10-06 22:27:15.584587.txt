@@ -1,0 +1,146 @@
+Game: USC vs. Arizona
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Disruption $75.00
+
+
+Game: Iowa vs. Purdue
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Streetermason $50.00
+ 2. deansequeira $50.00
+ 3. Efangmann $50.00
+ 4. cmbasken $55.00
+ 5. navsmi $60.00
+ 6. Kraap $75.00
+ 7. Graceraap $75.00
+ 8. nathanhawk $79.00
+ 9. carolynmayy $80.00
+ 10. kieralnelson $80.00
+
+
+Game: Wisconsin vs. Rutgers
+Sport: Football
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. Owenpaul18 $48.00
+ 2. Sewagman $50.00
+ 3. Rtruschinski $50.00
+ 4. tatize $50.00
+ 5. mollykelly $50.00
+ 6. rachelemanuel1 $53.00
+ 7. Abigail33 $55.00
+ 8. Whitneyhawley $55.00
+ 9. sadesai3 $55.00
+ 10. ellapeterson $58.00
+ 11. davidengelking $60.00
+ 12. maxliss $60.00
+ 13. sahit1168 $60.00
+ 14. truemcloughlin $60.00
+ 15. colelozon $60.00
+ 16. asapkatiee $60.00
+ 17. Claireschlatterer $60.00
+ 18. cnchin $60.00
+ 19. Jsanford2004 $63.00
+ 20. blancacollins $65.00
+ 21. SuperBooger $65.00
+ 22. aditya_shh $69.00
+ 23. Ebags24 $70.00
+ 24. jlimberis $70.00
+ 25. samanthagruber $70.00
+ 26. Maddy.schultz $70.00
+ 27. Linhvo $70.00
+ 28. snankin $70.00
+ 29. Skrosin $75.00
+ 30. Rose1122 $75.00
+
+
+Game: Michigan vs. Providence
+Sport: Hockey
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. jdero $20.00
+
+
+Game: Wisconsin vs. Augustana
+Sport: Hockey
+Date: 2023-10-07 00:00:00
+Volume: 0
+Listings:
+ 1. azimprich $8.00
+ 2. chloesimonson $9.99
+ 3. abnercasanova $10.00
+ 4. mgamero $10.00
+ 5. ihoffman3 $10.00
+
+
+Game: Wisconsin vs. Augustana
+Sport: Hockey
+Date: 2023-10-08 00:00:00
+Volume: 0
+Listings:
+ 1. aharder04 $8.00
+ 2. Kparas $9.99
+ 3. hpool $10.00
+ 4. ihoffman3 $10.00
+ 5. rashjichords $10.00
+ 6. Skrosin $14.00
+ 7. Hal.Stein $15.00
+
+
+Game: Purdue vs. Ohio State
+Sport: Football
+Date: 2023-10-14 00:00:00
+Volume: 0
+Listings:
+ 1. Ridges03 $80.00
+ 2. Deven.Hawkins $80.00
+ 3. Anoriaelaine $100.00
+ 4. amiravanest $100.00
+ 5. Charleymani $100.00
+ 6. thomp897 $110.00
+
+
+Game: Michigan vs. Indiana
+Sport: Football
+Date: 2023-10-14 00:00:00
+Volume: 0
+Listings:
+ 1. delha2004 $26.00
+ 2. will303 $26.00
+ 3. mataliu $27.00
+ 4. caydencebach $28.00
+ 5. sohamsal $29.00
+ 6. rbouch $29.00
+ 7. pzellmer03@gmail.com $29.00
+ 8. pburton $30.00
+ 9. Carmenhirmiz $30.00
+ 10. layneec $30.00
+ 11. Aarathi11 $30.00
+ 12. ColinM $30.00
+ 13. emhavard $30.00
+ 14. Ankawa $30.00
+ 15. brettwoo $30.00
+ 16. lorettaa $30.00
+ 17. juliannedacunzo $30.00
+ 18. bpeck $30.00
+ 19. erikawebb $30.00
+ 20. SophieGrossman $32.00
+ 21. acywang $35.00
+ 22. dennlin $35.00
+ 23. Amanpar $35.00
+ 24. pndasean $35.00
+ 25. bbajema $35.00
+ 26. Lpyfer $35.00
+ 27. samluper_ $35.00
+ 28. hmorenom $35.00
+ 29. emilypietrzak $35.00
+ 30. mbjaffe $38.00
+
+

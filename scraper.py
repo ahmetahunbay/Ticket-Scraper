@@ -94,7 +94,7 @@ if __name__ == '__main__':
     scrapeTime, gameList = scrapeTickets()
 
     #write to file for visualization
-    filePath = "./scrapes/" + str(scrapeTime) + ".txt"
+    filePath = "./scrape_timestamps/" + scrapeTime.strftime("%m-%d-%Y, %I:%M %p") + ".txt"
     with open(filePath, 'w') as file:
         for game, ticketList in gameList:
             file.write("Game: " + game.team1 + " vs. " + game.team2 + "\n")
