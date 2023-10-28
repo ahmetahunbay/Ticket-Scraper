@@ -1,6 +1,4 @@
 gameId,team1,team2,date,sport
-1434063075,Penn State,Alaska Anchorage,2023-10-27 00:00:00,Hockey
-2278710479,Michigan,Lindenwood,2023-10-27 00:00:00,Hockey
 1210932042,Nebraska,Purdue,2023-10-28 00:00:00,Football
 3219374379,Penn State,Indiana,2023-10-28 00:00:00,Football
 1931871564,Wisconsin,Ohio State,2023-10-28 00:00:00,Football
@@ -9,7 +7,6 @@ gameId,team1,team2,date,sport
 722627059,Purdue,Grace College,2023-11-01 00:00:00,Basketball
 3001853150,Wisconsin,UW-Stevens Point,2023-11-01 00:00:00,Basketball
 1325145513,Michigan State,Nebraska,2023-11-03 00:00:00,Football
-1323793396,Wisconsin,Michigan,2023-11-03 00:00:00,Hockey
 394725698,Indiana,Marian (Exhibition),2023-11-03 00:00:00,Basketball
 1027684532,Indiana,Wisconsin,2023-11-04 00:00:00,Football
 1940108086,Michigan,Purdue,2023-11-04 00:00:00,Football

@@ -139,9 +139,6 @@ def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
 
         driver.get(site)
 
-        #todo: get ticket volume
-        volume = 0
-
         #game = get_game(driver)
 
         load_tickets(driver)
@@ -157,12 +154,25 @@ def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
                 tickets[ticket] = 0
             
             tickets[ticket] += 1
+
+        volume = get_volume(driver)
             
         gameMap[game] = tickets
         sold, listed = snapshot_statuses.get(game.gameId).sold, snapshot_statuses.get(game.gameId).listed
         csv_statuses.append(CSVGameStatus(game.gameId, volume, sold, listed, scrape_time))
         
     return gameMap
+
+def get_volume(driver):
+    selling_tab = driver.find_elements(By.CLASS_NAME, 'tab-selectors')[1]
+    driver.execute_script("arguments[0].click();", selling_tab)
+    sell_tickets_base = WebDriverWait(driver, 3).until(
+                EC.visibility_of_element_located((By.ID, 'sellTickets'))
+            )
+    
+    sub_cats = sell_tickets_base.find_elements(By.CLASS_NAME, 'card-element-interior-dark')[0]
+    return int(sub_cats.text.split(" ")[0])
+
 
 def getUserCreds(listing):
     verified = False

@@ -1,239 +1,187 @@
 userName,price,section,row,seat,quicksell,verified,time,gameId,action
-kellianneknox,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1434063075,LISTED
-Kbaumbic,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,2278710479,LISTED
-jfarrow,40.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,2278710479,LISTED
-ealpert2,20.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1210932042,LISTED
-Shaed1,23.5,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-hts5078,24.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-mpd5639,24.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Sofiaferreira,24.99,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-BMills73,24.99,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-meganschulz,25.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Chris0429,25.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Dylanbender36,25.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-C19mr,25.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-AkashAnne,27.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Sydneylee,28.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-paulinaplopez,29.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-kaboyles,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-bmh5956,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Kswarner18,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Bandracer87,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Rpage123,33.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-lmd5970,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Mbemisderfer,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-dkc5528@psu.edu,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-annaens,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-anngalullo,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-scotty.stuart14,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-mpolyak,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-sophiawpsu,35.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Tnap,39.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-rtyanyes,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Hmahoney140,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Mjh6831,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-phl84529,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-zow333,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-kkaia,45.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-elisa_abdallah,50.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-ABeddings,50.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-ashiakelly10,55.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-ckc5798,60.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Samyar,60.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-fnifaoui,60.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-graceryyann,65.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-sophiemarsland,65.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Althea,69.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-bea5143,70.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-paige14m,70.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-kendylseib,70.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Colfer,75.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-karleylsaxon,80.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Gyp5102,80.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Maddiebrooks28,80.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-aas6183,90.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-javigomez71,98.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Seanork,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-prcoval27,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Zrusso18,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-senu.ratnayake,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-ekj.24,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-cjlim328,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-emilymicciche,700.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,3219374379,LISTED
-Nrocky,90.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-nitinthepic,95.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-amelia_h29,95.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-magnes,99.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Chenry3112,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Zdion,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-thebenham,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Krlamont,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-maddiewismer,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Calliemarie6,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-erisgaard,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Michael5763,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-kkiley03,100.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-cnavarrette@wisc.edu,105.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-McKenzieMil08,105.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Aglawton,108.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-sgrossfeld,110.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-evascott,110.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Carleyjk,110.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Jhorsfall,110.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-fwistrom,114.99,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-bqua,115.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Stellayoung,120.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Martzi,120.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Jdufore,120.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Pbakkestuen,120.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-nikkidunn35,120.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Kmclifford@wisc.edu,124.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-rbilgrien,125.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-rbilgrien,125.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-ebalsiger,125.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-arindfleisch,130.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Mrosenberg,134.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Elainadebord,140.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-swatisriram,140.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-qburke1,149.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-etully,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-akult31,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Rose1122,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-jrcoenen2,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-ck11,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-hkerner,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-JosephOrin,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-maharris7,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Pranchero,150.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-And9294,160.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-lily.engel,160.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Sethmass,160.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Clairepapandrea,160.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-bhkrause14,175.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-carinameix,175.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-juliafischer,175.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Nivi,178.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-lbates,180.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-rmahe,180.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-izikno,180.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-MLaughlin,185.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Kaylinlisy,190.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Mattachap,195.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-elliefisher,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-jecochran,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Astamatakos,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Ekeithh,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-hopepilch,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-katelynjacobs,200.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Ejgoebel,215.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-cwalvoort,215.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-michaeltran,220.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-iristjones,225.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Tobyberlinski,225.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-tklasell,250.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Valerieloja,250.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-jmvarghese,275.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Claireterp,300.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-akaben101,330.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-hans21,350.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-taycrnk,400.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-TrueC,420.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-mcKayliejustman,450.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-funkydog306,500.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Mislami,750.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1931871564,LISTED
-Bouugie,70.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1182389421,LISTED
-rbrozyna,75.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1182389421,LISTED
-kgerstin@umich.edu,15.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1095790362,LISTED
-Jsmiga,17.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1095790362,LISTED
-thovin,18.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1095790362,LISTED
-Kbaumbic,40.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1095790362,LISTED
-Charleymani,70.0,General Admission,,,True,False,2023-10-27 18:46:56.578606,722627059,LISTED
-Neven,7.5,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-ekpuckett,8.5,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-hsf2004,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-emmilymandell,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-tjnovy,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-madisonsipe,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-lydiafesterling,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-nleuty,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-jiapeng,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-hsiegworth,10.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-HenryUrch,12.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-Ekedinger,12.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-Loganrehwinkel,15.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-Katie99mn,15.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-clarehirsch,15.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-ekhopp,15.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,3001853150,LISTED
-Schoenherr,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1325145513,LISTED
-hpool,20.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1323793396,LISTED
-Tucker.Pearce,25.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,394725698,LISTED
-Tucker.Pearce,25.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,1027684532,LISTED
-avch,80.0,29,80,21,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-bradleydimick,80.0,28,60,31,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-will303,88.0,32,30,18,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-djphelka,89.0,27,87,6,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-wengjy,89.0,34,80,23,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-ztan,89.0,28,72,29,True,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Alexandi,90.0,32,91,37,True,True,2023-10-27 18:46:56.578606,1940108086,LISTED
-alissavezikov,90.0,28,85,26,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Scholt51,90.0,30,88,30,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-jeswheel,90.0,25,63,6,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-bfleischmann,95.0,30,77,31,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-brettwoo,95.0,28,55,8,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Tahancock22,99.99,30,74,5,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-maxtill,100.0,30,85,2,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Madisogi,100.0,26,71,20,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Darrenwang529,100.0,28,72,25,True,True,2023-10-27 18:46:56.578606,1940108086,LISTED
-Mflaugh,100.0,29,88,9,True,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-nasma,100.0,25,96,7,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-kdongg,100.0,27,42,3,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-Somervja,100.0,27,67,24,False,False,2023-10-27 18:46:56.578606,1940108086,LISTED
-cpowell,30.0,General Admission,,,False,False,2023-10-27 18:46:56.578606,2346492628,LISTED
-laurapeterson,125.0,General Admission,,,False,False,2023-10-27 18:53:05.591414,1931871564,LISTED
-amelia_h29,95.0,General Admission,,,False,False,2023-10-27 18:53:05.591414,1931871564,DELISTED
-nitinthepic,95.0,General Admission,,,False,False,2023-10-27 19:10:31.200814,1931871564,DELISTED
-hpool,20.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1323793396,EXPIRED
-Shaed1,21.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,3219374379,LISTED
-AkashAnne,21.5,General Admission,,,False,False,2023-10-27 21:24:32.661103,3219374379,LISTED
-Rpage123,22.0,General Admission,,,True,False,2023-10-27 21:24:32.661103,3219374379,LISTED
-Shaed1,23.5,General Admission,,,False,False,2023-10-27 21:24:32.661103,3219374379,DELISTED
-AkashAnne,27.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,3219374379,DELISTED
-Rpage123,33.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,3219374379,DELISTED
-nikkidunn35,100.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,LISTED
-magnes,99.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,DELISTED
-Chenry3112,100.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,DELISTED
-Zdion,100.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,DELISTED
-thebenham,100.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,DELISTED
-nikkidunn35,120.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,1931871564,DELISTED
-gesanchez2,15.0,General Admission,,,True,False,2023-10-27 21:24:32.661103,3001853150,LISTED
-Tahancock22,79.98,30,74,5,False,False,2023-10-27 21:24:32.661103,1940108086,LISTED
-Tamanna,80.0,27,85,16,False,False,2023-10-27 21:24:32.661103,1940108086,LISTED
-Tahancock22,99.99,30,74,5,False,False,2023-10-27 21:24:32.661103,1940108086,DELISTED
-hsf2004,28.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,985158873,LISTED
-Katie99mn,30.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,985158873,LISTED
-clarehirsch,30.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,985158873,LISTED
-madisonsipe,30.0,General Admission,,,False,False,2023-10-27 21:24:32.661103,985158873,LISTED
-mpd5639,20.0,General Admission,,,False,False,2023-10-27 21:43:46.374315,3219374379,LISTED
-mpd5639,24.0,General Admission,,,False,False,2023-10-27 21:43:46.374315,3219374379,DELISTED
-leenaj,75.0,General Admission,,,False,False,2023-10-27 21:47:32.923644,1931871564,LISTED
-kellianneknox,10.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1434063075,EXPIRED
-Kbaumbic,40.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,2278710479,EXPIRED
-jfarrow,40.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,2278710479,EXPIRED
-pbm5289,30.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,LISTED
-hts5078,24.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,DELISTED
-Shaed1,21.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,DELISTED
-AkashAnne,21.5,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,DELISTED
-Rpage123,22.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,DELISTED
-mpd5639,20.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,3219374379,DELISTED
-Jhorsfall,95.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,LISTED
-sgromero2@wisc.edu,100.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,LISTED
-osduncan,120.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,LISTED
-Krlamont,100.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,DELISTED
-Jhorsfall,110.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,DELISTED
-nikkidunn35,100.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,DELISTED
-leenaj,75.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,1931871564,DELISTED
-Charleymani,60.0,General Admission,,,True,False,2023-10-28 02:09:55.668544,2536484945,LISTED
-Aytay96,80.0,General Admission,,,True,True,2023-10-28 02:09:55.668544,2536484945,LISTED
-hsf2004,40.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,2134461193,LISTED
-Katie99mn,45.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,2134461193,LISTED
-HenryUrch,50.0,General Admission,,,False,False,2023-10-28 02:09:55.668544,2134461193,LISTED
+ealpert2,20.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1210932042,LISTED
+Sofiaferreira,24.99,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+BMills73,24.99,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+meganschulz,25.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Chris0429,25.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Dylanbender36,25.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+C19mr,25.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Sydneylee,28.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+paulinaplopez,29.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+kaboyles,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+bmh5956,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Kswarner18,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Bandracer87,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+pbm5289,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+lmd5970,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Mbemisderfer,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+dkc5528@psu.edu,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+annaens,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+anngalullo,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+scotty.stuart14,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+mpolyak,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+sophiawpsu,35.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Tnap,39.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+rtyanyes,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Hmahoney140,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Mjh6831,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+phl84529,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+zow333,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+kkaia,45.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+ABeddings,50.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+elisa_abdallah,50.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+ashiakelly10,55.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+ckc5798,60.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Samyar,60.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+fnifaoui,60.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+graceryyann,65.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+sophiemarsland,65.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Althea,69.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+bea5143,70.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+paige14m,70.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+kendylseib,70.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Colfer,75.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+karleylsaxon,80.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Gyp5102,80.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Maddiebrooks28,80.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+aas6183,90.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+javigomez71,98.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Seanork,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+prcoval27,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Zrusso18,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+senu.ratnayake,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+ekj.24,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+cjlim328,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+emilymicciche,700.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,3219374379,LISTED
+Nrocky,90.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+maddiewismer,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Calliemarie6,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+erisgaard,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Michael5763,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+kkiley03,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+sgromero2@wisc.edu,100.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+cnavarrette@wisc.edu,105.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+McKenzieMil08,105.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Aglawton,108.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+sgrossfeld,110.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+evascott,110.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Carleyjk,110.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+fwistrom,114.99,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+bqua,115.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Stellayoung,120.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Martzi,120.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Jdufore,120.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Pbakkestuen,120.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+osduncan,120.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Kmclifford@wisc.edu,124.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+rbilgrien,125.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+ebalsiger,125.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+laurapeterson,125.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+arindfleisch,130.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Mrosenberg,134.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Elainadebord,140.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+swatisriram,140.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+qburke1,149.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+maharris7,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+maharris7,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+akult31,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Rose1122,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+jrcoenen2,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+ck11,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+hkerner,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+JosephOrin,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+etully,150.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+And9294,160.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+lily.engel,160.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Sethmass,160.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Clairepapandrea,160.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+bhkrause14,175.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+carinameix,175.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+juliafischer,175.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Nivi,178.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+lbates,180.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+rmahe,180.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+izikno,180.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+MLaughlin,185.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Kaylinlisy,190.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Mattachap,195.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+elliefisher,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+jecochran,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Astamatakos,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Ekeithh,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+hopepilch,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+katelynjacobs,200.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Ejgoebel,215.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+cwalvoort,215.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+michaeltran,220.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+iristjones,225.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Tobyberlinski,225.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+tklasell,250.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Valerieloja,250.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+jmvarghese,275.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Claireterp,300.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+akaben101,330.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+hans21,350.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+taycrnk,400.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+TrueC,420.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+mcKayliejustman,450.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+funkydog306,500.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Mislami,750.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1931871564,LISTED
+Bouugie,70.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1182389421,LISTED
+rbrozyna,75.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1182389421,LISTED
+kgerstin@umich.edu,15.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1095790362,LISTED
+Jsmiga,17.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1095790362,LISTED
+thovin,18.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1095790362,LISTED
+Kbaumbic,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1095790362,LISTED
+Charleymani,70.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,722627059,LISTED
+Neven,7.5,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+ekpuckett,8.5,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+hsf2004,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+emmilymandell,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+tjnovy,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+madisonsipe,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+lydiafesterling,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+nleuty,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+jiapeng,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+hsiegworth,10.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+HenryUrch,12.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+Ekedinger,12.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+Loganrehwinkel,15.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+Katie99mn,15.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+clarehirsch,15.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+ekhopp,15.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+gesanchez2,15.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,3001853150,LISTED
+Schoenherr,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1325145513,LISTED
+Tucker.Pearce,25.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,394725698,LISTED
+Tucker.Pearce,25.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,1027684532,LISTED
+Tahancock22,79.98,30,74,5,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+avch,80.0,29,80,21,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+bradleydimick,80.0,28,60,31,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Tamanna,80.0,27,85,16,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+will303,88.0,32,30,18,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+djphelka,89.0,27,87,6,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+wengjy,89.0,34,80,23,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+ztan,89.0,28,72,29,True,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Alexandi,90.0,32,91,37,True,True,2023-10-28 02:33:25.156138,1940108086,LISTED
+alissavezikov,90.0,28,85,26,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Scholt51,90.0,30,88,30,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+jeswheel,90.0,25,63,6,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+bfleischmann,95.0,30,77,31,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+brettwoo,95.0,28,55,8,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+maxtill,100.0,30,85,2,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Madisogi,100.0,26,71,20,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Darrenwang529,100.0,28,72,25,True,True,2023-10-28 02:33:25.156138,1940108086,LISTED
+Mflaugh,100.0,29,88,9,True,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+nasma,100.0,25,96,7,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+kdongg,100.0,27,42,3,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+Somervja,100.0,27,67,24,False,False,2023-10-28 02:33:25.156138,1940108086,LISTED
+cpowell,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,2346492628,LISTED
+hsf2004,28.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,985158873,LISTED
+Katie99mn,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,985158873,LISTED
+clarehirsch,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,985158873,LISTED
+madisonsipe,30.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,985158873,LISTED
+Charleymani,60.0,General Admission,,,True,False,2023-10-28 02:33:25.156138,2536484945,LISTED
+Aytay96,80.0,General Admission,,,True,True,2023-10-28 02:33:25.156138,2536484945,LISTED
+hsf2004,40.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,2134461193,LISTED
+Katie99mn,45.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,2134461193,LISTED
+HenryUrch,50.0,General Admission,,,False,False,2023-10-28 02:33:25.156138,2134461193,LISTED
