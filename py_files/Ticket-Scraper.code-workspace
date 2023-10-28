@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"python.analysis.extraPaths": ["/Users/ahmetahunbay/VSCODE/Personals/Ticket-Scraper/py_files/", "../tests"],
+		"python.autoComplete.extraPaths": ["/Users/ahmetahunbay/VSCODE/Personals/Ticket-Scraper/py_files/", "../tests"],
+	}
+}
