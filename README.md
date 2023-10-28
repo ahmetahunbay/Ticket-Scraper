@@ -1,3 +1,5 @@
+<h2>outdated readme (sorry)</h2>
+
 <h3>Description</h3>
 This is the base for a ticket price scraper using Selenium and Python.
 
