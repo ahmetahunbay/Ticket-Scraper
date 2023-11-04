@@ -99,7 +99,7 @@ def scrapeTickets(scrape_time, db_statuses):
 
     csv_statuses = []
 
-    #iterate through upcoming game pages
+    #iterate through upcoming game pages, get game metadata
     gameSites = {}
     snapshot_statuses = {}
     for element in gamecard_elements:
@@ -107,10 +107,12 @@ def scrapeTickets(scrape_time, db_statuses):
         gameSites[game] = element.get_attribute('href')  
         snapshot_statuses[game.gameId] = status
         
+    # create 3 lists: new, old, changed    
     oldList = []
     newList = []
     changedList = []
-    # create 3 lists: new, old, changed
+
+    #iterate through games in db, compare to games in snapshot
     for game, site in gameSites.items():
         gameId = game.gameId
         if gameId in db_statuses:
@@ -123,14 +125,50 @@ def scrapeTickets(scrape_time, db_statuses):
             #new game
             newList.append((game, site))
         
+    #we are left with old games
     for gameId in db_statuses:
         #old game
         oldList.append(gameId)
 
+    #scrape data for new and changed games
     newMap = get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses)
     changedMap = get_game_map(driver, changedList, scrape_time, snapshot_statuses, csv_statuses)
 
     return oldList, newMap, changedMap, csv_statuses, snapshot_statuses
+
+def get_snapshot(element):
+    title_price = element.find_elements(By.CLASS_NAME, 'font-weight-bold')
+    game_title = title_price[0].text
+    price = int(float(title_price[1].text[1:]) * 100)
+    teams = [sub.strip() for sub in game_title.split("vs.")]
+    team1 = teams[0]
+    team2 = teams[1]
+    sport = element.find_element(By.CLASS_NAME, "upcomingGameSport").text
+    game_date = str(get_game_date(element))
+    
+    sold_listed = element.find_elements(By.CLASS_NAME, 'm-1')
+    sold = int(sold_listed[0].text.split(" ")[0])
+    listed = int(sold_listed[1].text.split(" ")[0])
+
+    game_string = ' '.join([team1, team2, game_date, sport])
+    game_id = binascii.crc32(game_string.encode()) & 0xffffffff
+
+    return Game(game_id, team1, team2, game_date, sport), GameStatus(price, sold, listed)
+    
+def get_game_date(element):
+    date_str = element.find_elements(By.CLASS_NAME, "upcomingGameSpan")[0].text
+    current_date = datetime.now()
+    current_date = datetime(current_date.year, current_date.month, current_date.day)
+
+    # Parse the date string into a datetime object
+    game_date = datetime.strptime(date_str, '%B %d')
+    game_date = game_date.replace(year=current_date.year)
+
+    # If the game date has already occurred this year, set the year to next year
+    if game_date < current_date:
+        game_date = game_date.replace(year=current_date.year + 1)
+
+    return game_date
 
 def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
     gameMap = {}
@@ -162,78 +200,6 @@ def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
         csv_statuses.append(CSVGameStatus(game.gameId, volume, sold, listed, scrape_time))
         
     return gameMap
-
-def get_volume(driver):
-    selling_tab = driver.find_elements(By.CLASS_NAME, 'tab-selectors')[1]
-    driver.execute_script("arguments[0].click();", selling_tab)
-    sell_tickets_base = WebDriverWait(driver, 3).until(
-                EC.visibility_of_element_located((By.ID, 'sellTickets'))
-            )
-    
-    sub_cats = sell_tickets_base.find_elements(By.CLASS_NAME, 'card-element-interior-dark')[0]
-    return int(sub_cats.text.split(" ")[0])
-
-
-def getUserCreds(listing):
-    verified = False
-    bolt = False
-    badge_section = listing.find_element(By.CLASS_NAME, 'ticket-badge-section')
-    if badge_section is not None:
-        scraped_user_verif = badge_section.find_elements(By.CLASS_NAME, 'material-symbols-outlined')
-        for verif in scraped_user_verif:
-            if verif.text == "bolt":
-                bolt = True
-            if verif.text == "verified":
-                verified = True
-    return verified, bolt
-
-def get_snapshot(element):
-    title_price = element.find_elements(By.CLASS_NAME, 'font-weight-bold')
-    game_title = title_price[0].text
-    price = int(float(title_price[1].text[1:]) * 100)
-    teams = [sub.strip() for sub in game_title.split("vs.")]
-    team1 = teams[0]
-    team2 = teams[1]
-    sport = element.find_element(By.CLASS_NAME, "upcomingGameSport").text
-    game_date = str(get_game_date(element))
-    
-    sold_listed = element.find_elements(By.CLASS_NAME, 'm-1')
-    sold = int(sold_listed[0].text.split(" ")[0])
-    listed = int(sold_listed[1].text.split(" ")[0])
-
-    game_string = ' '.join([team1, team2, game_date, sport])
-    game_id = binascii.crc32(game_string.encode()) & 0xffffffff
-
-    return Game(game_id, team1, team2, game_date, sport), GameStatus(price, sold, listed)
-    
-def get_game(driver):
-    # Game Name
-    game_title = WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, 'h1'))
-    )
-    game_title = game_title.text
-    teams = [sub.strip() for sub in game_title.split("vs.")]
-    team1 = teams[0]
-    team2 = teams[1]
-
-    #Get date of game from website
-    gameDateStr = WebDriverWait(driver, 10).until(
-        EC.visibility_of_all_elements_located((By.CLASS_NAME, 'upcomingGameSpan'))
-    )[0].text
-    gameDateTime = datetime.strptime(gameDateStr, "%A, %B %d, %Y")
-
-    #get sport
-    sportText = driver.find_element(By.CLASS_NAME, 'upcomingGameSport').text
-
-    #TODO: Get ticket volume, aka how many students are interested in ticket
-    #volume = driver.find_elements(By.CLASS_NAME, 'card-element-interior-dark')
-    volume = 0
-
-    #generate game id using team names, date, and sport
-    game_string = ' '.join([team1, team2, str(gameDateTime), sportText])
-    game_id = binascii.crc32(game_string.encode()) & 0xffffffff
-
-    return Game(game_id, team1, team2, gameDateTime, sportText)
 
 def load_tickets(driver):
     #load all ticket postings
@@ -279,17 +245,25 @@ def get_ticket(driver, post):
 
     return Ticket(userName, ticketPrice, seat_info, verified, bolt)
 
-def get_game_date(element):
-    date_str = element.find_elements(By.CLASS_NAME, "upcomingGameSpan")[0].text
-    current_date = datetime.now()
-    current_date = datetime(current_date.year, current_date.month, current_date.day)
+def get_volume(driver):
+    selling_tab = driver.find_elements(By.CLASS_NAME, 'tab-selectors')[1]
+    driver.execute_script("arguments[0].click();", selling_tab)
+    sell_tickets_base = WebDriverWait(driver, 3).until(
+                EC.visibility_of_element_located((By.ID, 'sellTickets'))
+            )
+    
+    sub_cats = sell_tickets_base.find_elements(By.CLASS_NAME, 'card-element-interior-dark')[0]
+    return int(sub_cats.text.split(" ")[0])
 
-    # Parse the date string into a datetime object
-    game_date = datetime.strptime(date_str, '%B %d')
-    game_date = game_date.replace(year=current_date.year)
-
-    # If the game date has already occurred this year, set the year to next year
-    if game_date < current_date:
-        game_date = game_date.replace(year=current_date.year + 1)
-
-    return game_date
+def getUserCreds(listing):
+    verified = False
+    bolt = False
+    badge_section = listing.find_element(By.CLASS_NAME, 'ticket-badge-section')
+    if badge_section is not None:
+        scraped_user_verif = badge_section.find_elements(By.CLASS_NAME, 'material-symbols-outlined')
+        for verif in scraped_user_verif:
+            if verif.text == "bolt":
+                bolt = True
+            if verif.text == "verified":
+                verified = True
+    return verified, bolt

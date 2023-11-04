@@ -12,7 +12,7 @@ VENV_NAME = venv
 # Define the path to the Python executable within the virtual environment
 VENV_PYTHON = $(VENV_NAME)/bin/python
 
-MODULE_DIR = py_files
+MODULE_DIR = main
 
 CSV_MODULE = csv_writer
 DB_MODULE = db
@@ -30,7 +30,7 @@ install:
 
 # Run your Python script using the virtual environment
 run:
-	$(VENV_PYTHON) py_files/handler.py
+	$(VENV_PYTHON) main/handler.py
 
 runTest:
 	$(VENV_PYTHON) tests/tests.py

@@ -2,14 +2,11 @@ import sqlite3
 from scraper import Ticket, Game, GameStatus
 from datetime import datetime
 
-def unpack_seat_info(seat_info):
-    section = seat_info["Section"]
-    row = seat_info["Row"]
-    seat = seat_info["Seat"]
-    return section, row, seat
-
 global conn
 global cursor
+#############
+#DB Functions
+#############
 
 def initDB(dbName):
     global conn
@@ -57,6 +54,84 @@ def initDB(dbName):
     '''
     )
 
+def clearDB(dbName):
+    global conn
+    global cursor
+
+    conn = sqlite3.connect(dbName)
+    cursor = conn.cursor()
+
+    cursor.execute(
+        '''
+        DROP TABLE IF EXISTS games
+        '''
+    )
+    cursor.execute(
+        '''
+        DROP TABLE IF EXISTS tickets
+        '''
+    )
+    cursor.execute(
+        '''
+        DROP TABLE IF EXISTS game_statuses
+        '''
+    )
+    conn.commit()
+
+def closeDB():
+    global conn
+    global cursor
+
+    cursor.close()
+    conn.close()
+
+###############
+#Game Functions
+###############
+
+def getGamesSet():
+    
+    cursor.execute(
+        '''
+        SELECT * FROM games
+        '''
+    )
+    sql_games = cursor.fetchall()
+    games = set()
+    
+    for game in sql_games:
+        #app_date = transform_date(game[3])
+        games.add(Game(game[0], game[1], game[2], game[3], game[4]))
+
+    return games
+
+def addGame(game):
+
+    try:
+        cursor.execute(
+            '''
+            INSERT INTO games VALUES (?, ?, ?, ?, ?)
+            ''', (game.gameId, game.team1, game.team2, game.date, game.sport)
+        )
+        conn.commit()
+    except sqlite3.IntegrityError:
+        pass
+
+def removeGame(gameId):
+    global cursor
+    global conn
+
+    cursor.execute(
+        '''
+        DELETE FROM games WHERE gameId = ?
+        ''', (gameId,)
+    )
+    conn.commit()
+
+######################
+#Game Status Functions
+######################
+
 def allGameStatuses():
     cursor.execute(
         '''
@@ -95,6 +170,10 @@ def set_statuses(statusMap):
     
     conn.commit()
 
+#################
+#Ticket Functions
+#################
+
 def getGameTickets(gameId):
     
     cursor.execute(
@@ -121,34 +200,6 @@ def getGameTickets(gameId):
     
     return tickets
 
-def getGamesSet():
-    
-    cursor.execute(
-        '''
-        SELECT * FROM games
-        '''
-    )
-    sql_games = cursor.fetchall()
-    games = set()
-    
-    for game in sql_games:
-        #app_date = transform_date(game[3])
-        games.add(Game(game[0], game[1], game[2], game[3], game[4]))
-
-    return games
-
-def addGame(game):
-
-    try:
-        cursor.execute(
-            '''
-            INSERT INTO games VALUES (?, ?, ?, ?, ?)
-            ''', (game.gameId, game.team1, game.team2, game.date, game.sport)
-        )
-        conn.commit()
-    except sqlite3.IntegrityError:
-        pass
-
 def addTicket(ticket, gameId, time, count):
     section, row, seat = unpack_seat_info(ticket.seat_info)
     db_bolt, db_verified = bool_to_db_creds(ticket.bolt, ticket.verified)
@@ -160,18 +211,6 @@ def addTicket(ticket, gameId, time, count):
     )
 
     conn.commit()
-
-def getGame(game_id):
-    global cursor
-    global conn
-
-    cursor.execute(
-        '''
-        SELECT * from games WHERE gameId = ?''', (game_id,)
-    )
-    sql_game = cursor.fetchone()
-
-    return Game(sql_game[0], sql_game[1], sql_game[2], sql_game[3], sql_game[4])
 
 def updateTicketCount(ticket, gameId, time, count):
 
@@ -219,16 +258,9 @@ def removeGameTickets(gameId):
     )
     conn.commit()
 
-def removeGame(gameId):
-    global cursor
-    global conn
-
-    cursor.execute(
-        '''
-        DELETE FROM games WHERE gameId = ?
-        ''', (gameId,)
-    )
-    conn.commit()
+#################
+#Helper Functions
+#################
 
 def db_creds_to_bool(db_bolt, db_verified):
     bolt = False if db_bolt else True
@@ -240,59 +272,26 @@ def bool_to_db_creds(bolt, verified):
     db_verified = 0 if verified else 1
     return db_bolt, db_verified
 
-def getTicketCount(ticket, gameId):
-    global cursor
-    global conn
+def pack_seat_info(section, row, seat):
+    seat_info = {"Section": section, "Row": row, "Seat": seat}
+    return seat_info
 
+def unpack_seat_info(seat_info):
+    section = seat_info["Section"]
+    row = seat_info["Row"]
+    seat = seat_info["Seat"]
+    return section, row, seat
+
+def transform_date(db_date):
+    return datetime.strptime(db_date, "%Y-%m-%d")
+
+def getTicketCount(ticket, gameId):
     section, row, seat = unpack_seat_info(ticket.seat_info)
 
     cursor.execute(
         '''
         SELECT count FROM tickets WHERE user = ? AND section = ? AND row = ? AND seat = ? AND price = ? AND gameId = ?
-        ''', (ticket.userName, section, row, seat, ticket.price, gameId,)
+        ''', (ticket.userName, section, row, seat, ticket.price, gameId)
     )
 
-    count = cursor.fetchone()
-
-    if count is None:
-        return 0
-
-    return count[0]
-
-def clearDB(dbName):
-    global conn
-    global cursor
-
-    conn = sqlite3.connect(dbName)
-    cursor = conn.cursor()
-
-    cursor.execute(
-        '''
-        DROP TABLE IF EXISTS games
-        '''
-    )
-    cursor.execute(
-        '''
-        DROP TABLE IF EXISTS tickets
-        '''
-    )
-    cursor.execute(
-        '''
-        DROP TABLE IF EXISTS game_statuses
-        '''
-    )
-    conn.commit()
-
-def closeDB():
-    global conn
-    global cursor
-
-    cursor.close()
-    conn.close()
-
-def pack_seat_info(section, row, seat):
-    seat_info = {"Section": section, "Row": row, "Seat": seat}
-    return seat_info
-
-def transform_date(db_date):
-    return datetime.strptime(db_date, "%Y-%m-%d")
+    return cursor.fetchone()[0]

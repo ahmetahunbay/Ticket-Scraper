@@ -1,9 +1,8 @@
 from scraper import scrapeTickets
 from scraper import Game, Ticket
 from csv_writer import writeCSVs, initCSVDir
-from db import set_statuses, addGame, removeGame, getGameTickets, addTicket, removeTicket, removeGameTickets, closeDB, initDB, unpack_seat_info, allGameStatuses, removeStatuses, updateTicketCount
+from db import closeDB, initDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
 from datetime import datetime
-
 
 class CSVListing:
     def __init__(self, ticket, gameId, time, action):
@@ -54,48 +53,6 @@ def handleTicketListings(dbTicketMap, currTicketMap, gameId, scrapeTime, csv_tic
                 #list to csv
                 csv_tickets.append(CSVListing(ticket, ticket.gameId, scrapeTime, "DELISTED"))
 
-'''
-def updateTickets(scrapeTime, gameMap):
-    dbGames = getGamesSet()
-    csv_listings = []
-    csv_games = []
-    
-    for game, ticketMap in gameMap.items():
-        #gameId = game.gameId
-
-        #update db and db map
-        if dbGames.__contains__(game):
-            dbGames.remove(game)
-        else:
-            csv_games.append(game)
-            addGame(game)
-
-        dbTicketMap = getGameTickets(game.gameId)
-
-        handleTicketListings(dbTicketMap, ticketMap, game.gameId, scrapeTime, csv_listings)
-
-    for game in dbGames:
-        #handles old games
-        handle_prev_game(game, scrapeTime, csv_listings)
-
-    return csv_games, csv_listings      
-
-''' 
-
-def handle_prev_game(game, scrapeTime, csv_listings):
-
-    gameId = game.gameId
-
-    #get expired tickets then remove expired tickets from db
-    dbTicketMap = getGameTickets(gameId)
-    removeGameTickets(gameId)
-    removeGame(gameId)
-
-    for ticket, num in dbTicketMap.items():
-        #list to csv
-        for i in range(num):      
-            csv_listings.append(CSVListing(ticket, gameId, scrapeTime, "EXPIRED"))
-
 def removeTickets(scrape_time, old_list, all_tickets):
     for gameId in old_list:
         tickets = getGameTickets(gameId)
@@ -137,9 +94,13 @@ if __name__ == '__main__':
     initDB("tickets.db")
     scrape_time = str(datetime.now())
     db_statuses = allGameStatuses()
+
+    #old list is a list of games no longer on site
+    #new map is a map of new games to tickets
+    #changed map is a map of games to tickets where the listings have changed
+    #csv_statuses is a list of new game statuses to write to csv
+    #current_statuses is a map of gameIds to statuses to update db
     old_list, new_map, changed_map, csv_statuses, current_statuses = scrapeTickets(scrape_time, db_statuses)
     
     handle_changes(scrape_time, old_list, new_map, changed_map, csv_statuses, current_statuses)
     closeDB()
-    
-    

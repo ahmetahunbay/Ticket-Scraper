@@ -52,8 +52,6 @@ def random_game():
     game_id = binascii.crc32(game_string.encode()) & 0xffffffff
     return Game(game_id, team1, team2, gameDateTime, sportText)
 
-
-
 #create test data for testing: 
 def random_scrape(numGames, numTickets):
     scrape_time = datetime.now()
@@ -81,7 +79,6 @@ def random_scrape(numGames, numTickets):
         csv_statuses.append(CSVGameStatus(game_id, volume, sold, listed, scrape_time))
         game_list.append(game_id)
     return scrape_time, gameMap, csv_statuses, snapshot_statuses
-
 
 def new_games(games, tickets):
     scrapeTime, gameMap, status_list, snapshot = random_scrape(games, tickets)
@@ -129,8 +126,6 @@ def test_game_expired():
 
     closeDB()
     
-    
-
 def test_init_listing(gameMap):
     listings = getCSVListings()
     usr_stat_tups = get_usr_stat_tups(listings)
@@ -165,7 +160,6 @@ def test_init_games(gameMap):
     for game in gameMap:
         assert game in csv_games
 
-
 def test_init_csv():
     start_test()
     gameMap, status_list = new_games(2,1)
@@ -173,15 +167,6 @@ def test_init_csv():
     test_init_statuses(status_list)
     test_init_games(gameMap)
     closeDB()
-
-class Foo:
-    def __init__(self, id):
-        self.id = id
-    
-    def __hash__(self):
-        return hash(self.id)
-    def __eq__(self, other):
-        return self.id == other.id
     
 def test_hashing():
     gameMap, _ = new_games(2,1)
@@ -289,7 +274,6 @@ def test_new_scrape():
 
     closeDB()
     print("new scrape status/game test passed")
-
 
 def test_duplicate_tickets():
     #test to see if duplicate listings are listed
