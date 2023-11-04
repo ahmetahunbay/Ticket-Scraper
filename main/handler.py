@@ -89,7 +89,7 @@ def handle_changes(scrape_time, old_list, new_map, changed_map, csv_statuses, cu
 
     writeCSVs(csv_statuses, csv_games, all_tickets)
 
-if __name__ == '__main__':
+def lambda_handler(event, context):
     initCSVDir("csv_data/")
     initDB("tickets.db")
     scrape_time = str(datetime.now())
