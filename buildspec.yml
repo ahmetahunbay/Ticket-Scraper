@@ -11,8 +11,8 @@ phases:
       - echo "Zipping deployment package..."
       - cd lib
       - zip -r9 ../deployment_package.zip .
+      - cd ../main && zip -r -g ../deployment_package.zip db.py dynamo_writer.py handler.py scraper.py
       - cd ..
-      - cd main && zip -r -g deployment_package.zip db.py dynamo_writer.py handler.py scraper.py
   post_build:
     commands:
       - echo "Updating lambda Function..."
