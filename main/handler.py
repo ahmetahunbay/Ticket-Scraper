@@ -3,6 +3,7 @@ from scraper import Game, Ticket
 from csv_writer import writeCSVs, initCSVDir
 from db import closeDB, initDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
 from datetime import datetime
+from dynamo_writer import write_to_dynamo
 
 class CSVListing:
     def __init__(self, ticket, gameId, time, action):
@@ -87,11 +88,11 @@ def handle_changes(scrape_time, old_list, new_map, changed_map, csv_statuses, cu
     newTickets(scrape_time, new_map, all_tickets, csv_games)
     set_statuses(current_statuses)
 
-    writeCSVs(csv_statuses, csv_games, all_tickets)
+    write_to_dynamo(csv_statuses, csv_games, all_tickets)
 
 def lambda_handler(event, context):
     initCSVDir("csv_data/")
-    initDB("tickets.db")
+    initDB("tickets")
     scrape_time = str(datetime.now())
     db_statuses = allGameStatuses()
 

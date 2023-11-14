@@ -1,2 +1,4 @@
 selenium
 by
+boto3
+mysql.connector

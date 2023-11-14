@@ -1,4 +1,4 @@
-import sqlite3
+import mysql.connector
 from scraper import Ticket, Game, GameStatus
 from datetime import datetime
 
@@ -8,11 +8,19 @@ global cursor
 #DB Functions
 #############
 
+
+#TODO: find out how to hop on vcp so that I can access the db
+
 def initDB(dbName):
     global conn
     global cursor
 
-    conn = sqlite3.connect(dbName)
+    conn = mysql.connector.connect(
+        host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
+        user="admin",
+        password="XXX",
+        database=dbName
+    )
     cursor = conn.cursor()
     cursor.execute('BEGIN')
 
