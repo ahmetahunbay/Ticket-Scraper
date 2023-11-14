@@ -12,7 +12,7 @@ phases:
       - cd lib
       - zip -r9 ../deployment_package.zip .
       - cd ..
-      - zip -r -g deployment_package.zip main/*.py
+      - zip -r -g deployment_package.zip main/db.py main/dynamo_writer.py main/handler.py main/scraper.py
   post_build:
     commands:
       - echo "Updating lambda Function..."
