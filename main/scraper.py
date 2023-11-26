@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from datetime import datetime
-from csv_writer import writeGameStatuses
+#from csv_writer import writeGameStatuses
 import math
 import hashlib
 import binascii
@@ -66,8 +66,8 @@ class GameStatus:
             return True
         return False
 
-#represents game status/ game metadata for csv storage
-class CSVGameStatus:
+#represents game status/ game metadata for permanent storage
+class PermGameStatus:
     def __init__(self, gameId, volume, sold, listed, scrapeTime):
         self.gameId = gameId
         self.volume = volume
@@ -97,7 +97,7 @@ def scrapeTickets(scrape_time, db_statuses):
         EC.visibility_of_all_elements_located((By.CLASS_NAME, 'upcomingGameCard'))
     )
 
-    csv_statuses = []
+    perm_statuses = []
 
     #iterate through upcoming game pages, get game metadata
     gameSites = {}
@@ -131,10 +131,10 @@ def scrapeTickets(scrape_time, db_statuses):
         oldList.append(gameId)
 
     #scrape data for new and changed games
-    newMap = get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses)
-    changedMap = get_game_map(driver, changedList, scrape_time, snapshot_statuses, csv_statuses)
+    newMap = get_game_map(driver, newList, scrape_time, snapshot_statuses, perm_statuses)
+    changedMap = get_game_map(driver, changedList, scrape_time, snapshot_statuses, perm_statuses)
 
-    return oldList, newMap, changedMap, csv_statuses, snapshot_statuses
+    return oldList, newMap, changedMap, perm_statuses, snapshot_statuses
 
 def get_snapshot(element):
     title_price = element.find_elements(By.CLASS_NAME, 'font-weight-bold')
@@ -170,7 +170,7 @@ def get_game_date(element):
 
     return game_date
 
-def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
+def get_game_map(driver, newList, scrape_time, snapshot_statuses, perm_statuses):
     gameMap = {}
 
     for game, site in newList:
@@ -197,7 +197,7 @@ def get_game_map(driver, newList, scrape_time, snapshot_statuses, csv_statuses):
             
         gameMap[game] = tickets
         sold, listed = snapshot_statuses.get(game.gameId).sold, snapshot_statuses.get(game.gameId).listed
-        csv_statuses.append(CSVGameStatus(game.gameId, volume, sold, listed, scrape_time))
+        perm_statuses.append(PermGameStatus(game.gameId, volume, sold, listed, scrape_time))
         
     return gameMap
 
