@@ -17,7 +17,7 @@ def initDB(dbName):
     conn = mysql.connector.connect(
         host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
         user="admin",
-        password="XXX",
+        password="password",
         database=dbName
     )
     cursor = conn.cursor()
