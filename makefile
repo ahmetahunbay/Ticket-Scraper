@@ -32,7 +32,7 @@ install:
 run:
 	$(VENV_PYTHON) main/handler.py
 
-runTest:
+runTests:
 	$(VENV_PYTHON) tests/tests.py
 
 # Remove the virtual environment and other generated files

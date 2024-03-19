@@ -6,7 +6,7 @@ import random
 dynamo_client = boto3.client('dynamodb')
 
 #TODO: make writes, ensure that if one fails they all fail
-def write_to_dynamo(ticket_listings, game_statuses, games):
+def write_to_perm(ticket_listings, game_statuses, games):
     dyn_listings = listings_to_dyn(ticket_listings)
     dyn_statuses = statuses_to_dyn(game_statuses)
     dyn_games = games_to_dyn(games)

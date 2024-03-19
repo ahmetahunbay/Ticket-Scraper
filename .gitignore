@@ -1,1 +1,7 @@
 deployment_package.zip
+test_tickets.db
+tickets.db
+csv_data/
+test_csv_data/
+venv/
+.vscode/

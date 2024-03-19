@@ -1,9 +1,13 @@
 from scraper import scrapeTickets
 from scraper import Game, Ticket
 #from csv_writer import writeCSVs, initCSVDir
-from db import closeDB, initDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
+from db import closeDB, initDB, rollbackDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
 from datetime import datetime
-from dynamo_writer import write_to_dynamo
+from dynamo_writer import write_to_perm
+import mysql.connector
+
+db_name = "tickets"
+test_db_name = "test_tickets"
 
 #permanent listing class for data
 class PermListing:
@@ -81,7 +85,7 @@ def newTickets(scrape_time, new_map, all_tickets, perm_games):
                 all_tickets.append(PermListing(ticket, gameId, scrape_time, "LISTED"))
             addTicket(ticket, gameId, scrape_time, num)
 
-def handle_changes(scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses):
+def handle_changes(write_func, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses):
     perm_games = []
     all_tickets = []
     removeTickets(scrape_time, old_list, all_tickets)
@@ -89,20 +93,40 @@ def handle_changes(scrape_time, old_list, new_map, changed_map, perm_statuses, c
     newTickets(scrape_time, new_map, all_tickets, perm_games)
     set_statuses(current_statuses)
 
-    write_to_dynamo(perm_statuses, perm_games, all_tickets)
+    write_func(perm_statuses, perm_games, all_tickets)
 
 def lambda_handler(event, context):
-    #initCSVDir("csv_data/")
-    initDB("tickets")
+
+    connection = mysql.connector.connect(
+        host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
+        user="admin",
+        password="password",
+        database=db_name
+    )
+
+    initDB(connection)
+    try:
+        scrape_time = str(datetime.now())
+        db_statuses = allGameStatuses()
+
+        #old list is a list of games no longer on site
+        #new map is a map of new games to tickets
+        #changed map is a map of games to tickets where the listings have changed
+        #perm_statuses is a list of new game statuses to write to the permanent db
+        #current_statuses is a map of gameIds to statuses to update db
+        old_list, new_map, changed_map, perm_statuses, current_statuses = scrapeTickets(scrape_time, db_statuses)
+        
+        handle_changes(write_to_perm, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
+    except Exception as e:
+        rollbackDB()
+    closeDB()
+    
+
+def test_handler(connection, csv_perm_writes, get_scrape, scrape_status):
     scrape_time = str(datetime.now())
     db_statuses = allGameStatuses()
 
-    #old list is a list of games no longer on site
-    #new map is a map of new games to tickets
-    #changed map is a map of games to tickets where the listings have changed
-    #perm_statuses is a list of new game statuses to write to the permanent db
-    #current_statuses is a map of gameIds to statuses to update db
-    old_list, new_map, changed_map, perm_statuses, current_statuses = scrapeTickets(scrape_time, db_statuses)
+    old_list, new_map, changed_map, perm_statuses, current_statuses = get_scrape(scrape_time, db_statuses)
     
-    handle_changes(scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
+    handle_changes(csv_perm_writes, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
     closeDB()

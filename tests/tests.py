@@ -1,11 +1,10 @@
 import sys
-
-
-from csv_writer import initCSVDir, writeGameStatuses, clearCSVs, getCSVListings, writeCSVs, getCSVStatuses, getCSVGames
-from db import initDB, clearDB, getGamesSet, closeDB
-from scraper import Game, Ticket, GameStatus, CSVGameStatus
-from handler import updateTickets, handle_changes
+from csv_writer import write_to_perm, initCSVDir, writeGameStatuses, clearCSVs, getCSVListings, writeCSVs, getCSVStatuses, getCSVGames
+from db import initDB, rollbackDB, clearDB, getGamesSet, closeDB
+from scraper import Game, Ticket, scrapeTickets, GameStatus, GameStatus
+from handler import updateTickets, handle_changes, test_handler
 from datetime import date, timedelta, datetime
+import sqlite3
 import string
 import random
 import binascii
@@ -16,7 +15,7 @@ import binascii
 # list(dbTicketMap.keys())
 
 csvDir = "test_csv_data/"
-db = "test_tickets.db"
+db_name = "test_tickets.db"
 # define the set of characters to choose from
 characters = string.ascii_letters + string.digits
 
@@ -182,10 +181,11 @@ def get_usr_stat_tups(listings):
     return usr_stat_tups
     
 def start_test(): 
+    connection = sqlite3.connect(db_name)
     clearCSVs(csvDir)
-    clearDB(db)
+    clearDB(connection)
     initCSVDir(csvDir)
-    initDB(db)
+    initDB(connection)
 
 def adjPrices(gameMap):
     for _, ticketMap in gameMap.items():
@@ -299,26 +299,41 @@ def test_duplicate_tickets():
     closeDB()
     print("test duplicate tickets passed")
 
+def test_scraper():
+    handle_changes()
+
+
 if __name__ == '__main__':
     #test_hashing()
+    start_test()
+    try:
+        connection = sqlite3.connect(db_name)
+        scrape_time = str(datetime.now())
 
-    #test that games, statuses, and tickets get intialized correctly
-    test_init_csv()
+        test_handler(connection, write_to_perm, scrapeTickets, None)
+    except Exception as e:
+        rollbackDB()
+        closeDB()
 
-    #test new scrape on statuses and games
-    test_new_scrape()
+'''
 
-    #tests whether game expiring yields correct outcome
-    test_game_expired()
+        #test that games, statuses, and tickets get intialized correctly
+        test_init_csv()
 
-    #test price changes
-    test_price_change()
+        #test new scrape on statuses and games
+        test_new_scrape()
 
-    #test duplicate tickets
-    test_duplicate_tickets()
+        #tests whether game expiring yields correct outcome
+        test_game_expired()
 
-    #test that db and csv stay consistent if errors arise
+        #test price changes
+        test_price_change()
 
+        #test duplicate tickets
+        test_duplicate_tickets()
+
+        #test that db and csv stay consistent if errors arise
+    '''
 
 
 

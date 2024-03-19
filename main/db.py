@@ -9,17 +9,11 @@ global cursor
 #############
 
 #TODO: find out how to hop on vcp so that I can access the db
-
-def initDB(dbName):
+def initDB(connection):
     global conn
     global cursor
 
-    conn = mysql.connector.connect(
-        host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
-        user="admin",
-        password="password",
-        database=dbName
-    )
+    conn = connection
     cursor = conn.cursor()
     cursor.execute('BEGIN')
 
@@ -61,16 +55,11 @@ def initDB(dbName):
     '''
     )
 
-def clearDB(dbName):
+def clearDB(connection):
     global conn
     global cursor
 
-    conn = mysql.connector.connect(
-        host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
-        user="admin",
-        password="XXX",
-        database=dbName
-    )
+    conn = connection
     cursor = conn.cursor()
 
     cursor.execute(
@@ -88,6 +77,58 @@ def clearDB(dbName):
         DROP TABLE IF EXISTS game_statuses
         '''
     )
+    conn.commit()
+
+def initTestDB(dbName):
+    global conn
+    global cursor
+
+    cursor = conn.cursor()
+    cursor.execute('BEGIN')
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS tickets (
+            user TEXT,
+            price INTEGER,
+            section TEXT,
+            row TEXT,
+            seat TEXT,
+            bolt TEXT,
+            verified TEXT,
+            time TEXT,
+            gameId INTEGER,
+            count INTEGER
+        )
+    ''')
+
+    cursor.execute(
+        '''
+        CREATE TABLE IF NOT EXISTS games(
+            gameId INTEGER PRIMARY KEY,
+            team1 TEXT,
+            team2 TEXT, 
+            date TEXT,
+            sport TEXT
+        )
+    '''
+    )
+
+    cursor.execute(
+        '''
+        CREATE TABLE IF NOT EXISTS game_statuses(
+            gameId INTEGER PRIMARY KEY,
+            lowest_price INTEGER,
+            sold INTEGER,
+            listed INTEGER
+        )
+    '''
+    )
+
+def rollbackDB():
+    global conn
+    global cursor
+
+    cursor.execute('ROLLBACK')
     conn.commit()
 
 def closeDB():
