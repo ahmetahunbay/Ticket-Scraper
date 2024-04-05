@@ -1,4 +1,3 @@
-import mysql.connector
 from scraper import Ticket, Game, GameStatus
 from datetime import datetime
 

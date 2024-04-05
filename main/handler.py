@@ -5,9 +5,14 @@ from db import closeDB, initDB, rollbackDB, addGame, removeGame, getGameTickets,
 from datetime import datetime
 from dynamo_writer import write_to_perm
 import mysql.connector
+import os
 
 db_name = "tickets"
 test_db_name = "test_tickets"
+
+user_name = os.environ['USER_NAME']
+password = os.environ['PASSWORD']
+rds_proxy_host = os.environ['RDS_PROXY_HOST']
 
 #permanent listing class for data
 class PermListing:
@@ -97,12 +102,17 @@ def handle_changes(write_func, scrape_time, old_list, new_map, changed_map, perm
 
 def lambda_handler(event, context):
 
-    connection = mysql.connector.connect(
-        host="tickets.cbng1sgvynug.us-east-2.rds.amazonaws.com",
-        user="admin",
-        password="password",
-        database=db_name
-    )
+    try:
+        connection = mysql.connector.connect(
+            host=rds_proxy_host,
+            user=user_name,
+            password=password,
+            database=db_name
+        )
+    except Exception as e:
+        print("Error connecting to database")
+        print(e)
+        return
 
     initDB(connection)
     try:
