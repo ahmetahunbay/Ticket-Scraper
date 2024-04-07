@@ -113,9 +113,14 @@ def lambda_handler(event, context):
     print("Connected to RDS MySQL")
 
     initDB(connection)
+
+    print("Initialized DB")
+
     try:
         scrape_time = str(datetime.now())
         db_statuses = allGameStatuses()
+
+        print("Retrieved stale game statuses")
 
         #old list is a list of games no longer on site
         #new map is a map of new games to tickets
@@ -123,6 +128,8 @@ def lambda_handler(event, context):
         #perm_statuses is a list of new game statuses to write to the permanent db
         #current_statuses is a map of gameIds to statuses to update db
         old_list, new_map, changed_map, perm_statuses, current_statuses = scrapeTickets(scrape_time, db_statuses)
+
+        print("Performed scrape")
         
         handle_changes(write_to_perm, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
     except Exception as e:
