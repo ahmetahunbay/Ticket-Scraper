@@ -4,7 +4,7 @@ from scraper import Game, Ticket
 from db import closeDB, initDB, rollbackDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
 from datetime import datetime
 from dynamo_writer import write_to_perm
-import mysql.connector
+import pymysql
 import os
 
 db_name = "tickets"
@@ -103,12 +103,7 @@ def handle_changes(write_func, scrape_time, old_list, new_map, changed_map, perm
 def lambda_handler(event, context):
 
     try:
-        connection = mysql.connector.connect(
-            host=rds_proxy_host,
-            user=user_name,
-            password=password,
-            database=db_name
-        )
+        connection = pymysql.connect(host=rds_proxy_host, user=user_name, passwd=password, db=db_name, connect_timeout=5)
     except Exception as e:
         print("Error connecting to database")
         print(e)
