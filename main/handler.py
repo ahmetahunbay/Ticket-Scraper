@@ -110,6 +110,8 @@ def lambda_handler(event, context):
         print(e)
         return
 
+    print("Connected to RDS MySQL")
+
     initDB(connection)
     try:
         scrape_time = str(datetime.now())
