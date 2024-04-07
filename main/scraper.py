@@ -104,8 +104,12 @@ def scrapeTickets(scrape_time, db_statuses):
     snapshot_statuses = {}
     for element in gamecard_elements:
         game, status = get_snapshot(element)
+        if game is None:
+            continue
         gameSites[game] = element.get_attribute('href')  
         snapshot_statuses[game.gameId] = status
+    
+    print("Retreieved game snapshots")
         
     # create 3 lists: new, old, changed    
     oldList = []
@@ -132,12 +136,15 @@ def scrapeTickets(scrape_time, db_statuses):
 
     #scrape data for new and changed games
     newMap = get_game_map(driver, newList, scrape_time, snapshot_statuses, perm_statuses)
+    
     changedMap = get_game_map(driver, changedList, scrape_time, snapshot_statuses, perm_statuses)
 
     return oldList, newMap, changedMap, perm_statuses, snapshot_statuses
 
 def get_snapshot(element):
     title_price = element.find_elements(By.CLASS_NAME, 'font-weight-bold')
+    if title_price[1].text == "N/A":
+        return None, None
     game_title = title_price[0].text
     price = int(float(title_price[1].text[1:]) * 100)
     teams = [sub.strip() for sub in game_title.split("vs.")]

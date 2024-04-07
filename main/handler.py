@@ -3,16 +3,14 @@ from scraper import Game, Ticket
 #from csv_writer import writeCSVs, initCSVDir
 from db import closeDB, initDB, rollbackDB, addGame, removeGame, getGameTickets, addTicket, updateTicketCount, removeTicket, removeGameTickets, allGameStatuses, removeStatuses, set_statuses, unpack_seat_info
 from datetime import datetime
-from dynamo_writer import write_to_perm
+from dynamo_writer import write_to_dyn
+from csv_writer import write_to_csv, initCSVDir
 import pymysql
+import sqlite3
 import os
 
 db_name = "tickets"
 test_db_name = "test_tickets"
-
-user_name = os.environ['USER_NAME']
-password = os.environ['PASSWORD']
-rds_proxy_host = os.environ['RDS_PROXY_HOST']
 
 #permanent listing class for data
 class PermListing:
@@ -102,6 +100,10 @@ def handle_changes(write_func, scrape_time, old_list, new_map, changed_map, perm
 
 def lambda_handler(event, context):
 
+    user_name = os.environ['USER_NAME']
+    password = os.environ['PASSWORD']
+    rds_proxy_host = os.environ['RDS_PROXY_HOST']
+
     try:
         print(f"Trying to connect with {rds_proxy_host} as {user_name} and {password} to {db_name}")
         connection = pymysql.connect(host=rds_proxy_host, user=user_name, passwd=password, db=db_name, connect_timeout=5)
@@ -131,8 +133,9 @@ def lambda_handler(event, context):
 
         print("Performed scrape")
         
-        handle_changes(write_to_perm, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
+        handle_changes(write_to_dyn, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
     except Exception as e:
+        print(e)
         rollbackDB()
     closeDB()
     
@@ -145,3 +148,31 @@ def test_handler(connection, csv_perm_writes, get_scrape, scrape_status):
     
     handle_changes(csv_perm_writes, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
     closeDB()
+
+def local_run():
+    connection = sqlite3.connect('tickets.db')
+    initDB(connection)
+
+    try:
+        scrape_time = str(datetime.now())
+        db_statuses = allGameStatuses()
+        initCSVDir("csv_data")
+
+        print("Retrieved stale game statuses")
+
+        #old list is a list of games no longer on site
+        #new map is a map of new games to tickets
+        #changed map is a map of games to tickets where the listings have changed
+        #perm_statuses is a list of new game statuses to write to the permanent db
+        #current_statuses is a map of gameIds to statuses to update db
+        old_list, new_map, changed_map, perm_statuses, current_statuses = scrapeTickets(scrape_time, db_statuses)
+
+        print("Performed scrape")
+        
+        handle_changes(write_to_csv, scrape_time, old_list, new_map, changed_map, perm_statuses, current_statuses)
+    except Exception as e:
+        print(e)
+        rollbackDB()
+
+if __name__ == "__main__":
+    local_run()

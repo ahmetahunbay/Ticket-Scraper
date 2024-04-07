@@ -1,6 +1,7 @@
 import csv
 import tempfile
 import shutil
+import os
 
 #instantiates global variables for csv files
 
@@ -13,17 +14,19 @@ def initCSVDir(dir):
     csvDir = dir
 
 def clearCSVs(csvDir):
-    with open(csvDir + statusCSV, 'w') as csvfile:
+    with open(os.path.join(csvDir, statusCSV), 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(["gameId", "volume", "sold", "listed", "scrapetime"])
-    with open(csvDir + listingsCSV, 'w') as csvfile:
+    with open(os.path.join(csvDir, listingsCSV), 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(["userName", "price", "section", "row", "seat", "quicksell", "verified", "time", "gameId", "action"])
-    with open(csvDir + gamesCSV, 'w') as csvfile:
+    with open(os.path.join(csvDir, gamesCSV), 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(["gameId", "team1", "team2", "date", "sport"])
 
-def write_to_perm(statuses, games, listings):
+def write_to_csv(statuses, games, listings):
+    global csvDir
+
     try:
         with tempfile.NamedTemporaryFile('w', delete=False) as temp_status, \
              tempfile.NamedTemporaryFile('w', delete=False) as temp_listings, \
@@ -46,11 +49,11 @@ def write_to_perm(statuses, games, listings):
             for game in games:
                 csvwriter_games.writerow([game.gameId, game.team1, game.team2, game.date, game.sport])
 
-        with open(temp_status.name, 'r') as temp_file, open(csvDir + statusCSV, 'a', newline='') as orig_file:
+        with open(temp_status.name, 'r') as temp_file, open(os.path.join(csvDir, statusCSV), 'a', newline='') as orig_file:
             shutil.copyfileobj(temp_file, orig_file)
-        with open(temp_listings.name, 'r') as temp_file, open(csvDir + listingsCSV, 'a', newline='') as orig_file:
+        with open(temp_listings.name, 'r') as temp_file, open(os.path.join(csvDir, listingsCSV), 'a', newline='') as orig_file:
             shutil.copyfileobj(temp_file, orig_file)
-        with open(temp_games.name, 'r') as temp_file, open(csvDir + gamesCSV, 'a', newline='') as orig_file:
+        with open(temp_games.name, 'r') as temp_file, open(os.path.join(csvDir, gamesCSV), 'a', newline='') as orig_file:
             shutil.copyfileobj(temp_file, orig_file)
 
     except Exception as e:
