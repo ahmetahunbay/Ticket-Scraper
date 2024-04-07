@@ -21,7 +21,7 @@ def initDB(connection):
             user TEXT,
             price INTEGER,
             section TEXT,
-            row TEXT,
+            seat_row TEXT,
             seat TEXT,
             bolt TEXT,
             verified TEXT,
@@ -90,7 +90,7 @@ def initTestDB(dbName):
             user TEXT,
             price INTEGER,
             section TEXT,
-            row TEXT,
+            seat_row TEXT,
             seat TEXT,
             bolt TEXT,
             verified TEXT,
@@ -253,25 +253,25 @@ def getGameTickets(gameId):
     return tickets
 
 def addTicket(ticket, gameId, time, count):
-    section, row, seat = unpack_seat_info(ticket.seat_info)
+    section, seat_row, seat = unpack_seat_info(ticket.seat_info)
     db_bolt, db_verified = bool_to_db_creds(ticket.bolt, ticket.verified)
 
     cursor.execute(
         '''
         INSERT INTO tickets VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (ticket.userName, ticket.price, section, row, seat, db_bolt, db_verified, time, gameId, count)
+        ''', (ticket.userName, ticket.price, section, seat_row, seat, db_bolt, db_verified, time, gameId, count)
     )
 
     conn.commit()
 
 def updateTicketCount(ticket, gameId, time, count):
 
-    section, row, seat = unpack_seat_info(ticket.seat_info)
+    section, seat_row, seat = unpack_seat_info(ticket.seat_info)
 
     cursor.execute(
         '''
-        UPDATE tickets SET count = ? WHERE user = ? AND section = ? AND row = ? AND seat = ? AND price = ? AND gameId = ?
-        ''', (count, ticket.userName, section, row, seat, ticket.price, gameId)
+        UPDATE tickets SET count = ? WHERE user = ? AND section = ? AND seat_row = ? AND seat = ? AND price = ? AND gameId = ?
+        ''', (count, ticket.userName, section, seat_row, seat, ticket.price, gameId)
     )
 
     conn.commit()
@@ -282,19 +282,19 @@ def removeTicket(ticket, gameId, count):
 
     db_count = getTicketCount(ticket, gameId)
 
-    section, row, seat = unpack_seat_info(ticket.seat_info)
+    section, seat_row, seat = unpack_seat_info(ticket.seat_info)
 
     if db_count > count:
         cursor.execute(
             '''
-            UPDATE tickets SET count = ? WHERE user = ? AND section = ? AND row = ? AND seat = ? AND price = ? AND gameId = ?
-            ''', (db_count - count, ticket.userName, section, row, seat, ticket.price, gameId)
+            UPDATE tickets SET count = ? WHERE user = ? AND section = ? AND seat_row = ? AND seat = ? AND price = ? AND gameId = ?
+            ''', (db_count - count, ticket.userName, section, seat_row, seat, ticket.price, gameId)
         )
     else:
         cursor.execute(
             '''
-            DELETE FROM tickets WHERE user = ? AND section = ? AND row = ? AND seat = ? AND price = ?
-            ''', (ticket.userName, section, row, seat, ticket.price,)
+            DELETE FROM tickets WHERE user = ? AND section = ? AND seat_row = ? AND seat = ? AND price = ?
+            ''', (ticket.userName, section, seat_row, seat, ticket.price,)
         )
 
     conn.commit()
@@ -324,26 +324,26 @@ def bool_to_db_creds(bolt, verified):
     db_verified = 0 if verified else 1
     return db_bolt, db_verified
 
-def pack_seat_info(section, row, seat):
-    seat_info = {"Section": section, "Row": row, "Seat": seat}
+def pack_seat_info(section, seat_row, seat):
+    seat_info = {"Section": section, "Row": seat_row, "Seat": seat}
     return seat_info
 
 def unpack_seat_info(seat_info):
     section = seat_info["Section"]
-    row = seat_info["Row"]
+    seat_row = seat_info["Row"]
     seat = seat_info["Seat"]
-    return section, row, seat
+    return section, seat_row, seat
 
 def transform_date(db_date):
     return datetime.strptime(db_date, "%Y-%m-%d")
 
 def getTicketCount(ticket, gameId):
-    section, row, seat = unpack_seat_info(ticket.seat_info)
+    section, seat_row, seat = unpack_seat_info(ticket.seat_info)
 
     cursor.execute(
         '''
-        SELECT count FROM tickets WHERE user = ? AND section = ? AND row = ? AND seat = ? AND price = ? AND gameId = ?
-        ''', (ticket.userName, section, row, seat, ticket.price, gameId)
+        SELECT count FROM tickets WHERE user = ? AND section = ? AND seat_row = ? AND seat = ? AND price = ? AND gameId = ?
+        ''', (ticket.userName, section, seat_row, seat, ticket.price, gameId)
     )
 
     return cursor.fetchone()[0]
