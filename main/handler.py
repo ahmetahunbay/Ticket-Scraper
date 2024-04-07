@@ -103,6 +103,7 @@ def handle_changes(write_func, scrape_time, old_list, new_map, changed_map, perm
 def lambda_handler(event, context):
 
     try:
+        print(f"Trying to connect with {rds_proxy_host} as {user_name} and {password} to {db_name}")
         connection = pymysql.connect(host=rds_proxy_host, user=user_name, passwd=password, db=db_name, connect_timeout=5)
     except Exception as e:
         print("Error connecting to database")
